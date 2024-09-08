@@ -20,14 +20,32 @@ object galvan {
   //si tengo dinero no tengo deuda, si tengo deuda no tengo dinero
 
   method gastar(cuanto) {
-    
+    saldo -= cuanto
   }
 
   method deuda() {
-    
+//abs()
+// Answers absolute value of self
+
+// 2.abs()      ==> 2
+// (-3).abs()   ==> 3 (be careful with parentheses)
+// 2.7.abs()    ==> Answers 2.7
+// (-3.2).abs() ==> Answers 3.2 (be careful with parentheses)
+
+// min()
+// Answers the element that represents the minimum value in the range.
+// The criteria is by direct comparison of the elements (they must be sortable).
+// (1..5).min()  => Answers 1
+
+    return saldo.min(0).abs()
   }
 
   method dinero() {
+//   max()
+// Answers the element that represents the maximum value in the range.
+// (1..15).max()                       =>  Answers 15
+// new Range(start = 2, end = 5).max() => Answers 5
+// <strong>see</strong> List#max()
     return saldo.max(0)
   }
 
